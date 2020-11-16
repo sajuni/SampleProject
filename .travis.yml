@@ -14,8 +14,8 @@ cache:
 
 script: "./gradlew clean build"
 
-before_install:       # before_install을 추가해야한다.
-  - chmod +x gradlew
+before_script:
+ - chmod +x gradlew
  
 # CI 실행 완료 시 메일로 알람
 notifications:
