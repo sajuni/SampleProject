@@ -17,6 +17,9 @@ cache:
 
 script: "./gradlew clean build"
 
+before_deploy:
+  - zip -r lsh-srpingboot-webservice *
+
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
