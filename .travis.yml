@@ -17,11 +17,6 @@ cache:
 
 script: "./gradlew clean build"
 
-before_deploy:
-  
-  - cd before-deploy
-  - zip -r before-deploy * #before-deploy로 이동 후 전체 압축
-  - mv before-deploy/before-deploy.zip deploy/lsh-springboot-webservice.zip
   
   deploy:
   - provider: s3
