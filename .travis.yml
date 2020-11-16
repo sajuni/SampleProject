@@ -19,6 +19,8 @@ script: "./gradlew clean build"
 
 before_deploy:
   - zip -r lsh-srpingboot-webservice *
+  - mkdir -p deploy
+  - mv lsh-springboot-webservice.zip deploy/lsh-springboot-webservice.zip
 
 # CI 실행 완료시 메일로 알람
 notifications:
